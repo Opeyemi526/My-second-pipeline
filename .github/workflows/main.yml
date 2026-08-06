@@ -1,0 +1,15 @@
+name: My Second CI Pipeline
+
+on:
+  push:
+
+  jobs:
+    build:
+       runs-on: ubuntu-latest
+
+       steps:
+        - name: Checkout code
+         uses: actions/checkout@v4
+
+        - name: Say HELLO
+         run: echo "HELLO" Hameedah! My second CI pipeline is working."
