@@ -4,8 +4,13 @@ on:
   push:
 
 jobs:
-  build:
+    test:
+    needs: build
     runs-on: ubuntu-latest
+
+    steps:
+      - name: Test job
+        run: echo "This is my second job!"
 
     steps:
       - name: Checkout code
