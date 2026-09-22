@@ -13,3 +13,10 @@ jobs:
 
       - name: Say HELLO
         run: echo "HELLO Hameedah! My second CI pipeline is working."
+        
+     - name: Create test file
+      run: echo "This is my CI test file." > test.txt
+
+     - name: Check test file
+       run: test -f test.txt 
+      
