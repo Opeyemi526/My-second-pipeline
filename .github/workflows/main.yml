@@ -20,6 +20,9 @@ jobs:
       - name: Run test
         run: bash test.sh
 
+      - name: Create build file
+        run: echo "This file was created by the build job." > build.txt
+
   test:
     needs: build
     runs-on: ubuntu-latest
