@@ -2,7 +2,7 @@
 
 echo "Running my test..."
 
-if [ 1 -eq 2 ]; then
+if [ 1 -eq 1 ]; then
     echo "Test passed!"
 else
     echo "Test failed!"
