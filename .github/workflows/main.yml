@@ -16,4 +16,7 @@ jobs:
 
       - name: Check Linux
         run: uname -a
+        
+      - name: Run test
+        run: bash test.sh
       
