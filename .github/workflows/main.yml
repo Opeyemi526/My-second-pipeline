@@ -29,10 +29,18 @@ jobs:
           name: my-build-file
           path: build.txt
 
-  test:
+    test:
     needs: build
     runs-on: ubuntu-latest
 
     steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: my-build-file
+
+      - name: Read build file
+        run: cat build.txt
+
       - name: Test job
         run: echo "This is my second job!"
