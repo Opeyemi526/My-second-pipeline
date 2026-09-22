@@ -19,4 +19,11 @@ jobs:
         
       - name: Run test
         run: bash test.sh
+
+   test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Test job
+        run: echo "This is my second job!"
       
